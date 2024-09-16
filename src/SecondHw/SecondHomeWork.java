@@ -15,6 +15,6 @@ public class SecondHomeWork {
         System.out.println("Диана теперь получает " + newDianaSalary + "рублей. Годовой доход вырос на " + dianaSalaryDifference + "рублей»");
         System.out.println("Андрей теперь получает " + newAndreySalary + "рублей. Годовой доход вырос на " + andreySalaryDifference + "рублей»");
         System.out.println("Мария теперь получает " + newMariaSalary + "рублей. Годовой доход вырос на " + mariaSalaryDifference + "рублей»");
-        System.out.println(newDianaSalary);
+
     }
 }
