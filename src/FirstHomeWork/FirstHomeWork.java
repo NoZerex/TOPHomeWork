@@ -1,3 +1,5 @@
+package FirstHomeWork;
+
 import java.util.Scanner;
 
 public class FirstHomeWork {
@@ -14,7 +16,7 @@ public class FirstHomeWork {
         } else if (age > 24) {
             System.out.println("Вам пора идти на работу");
         } else {
-            System.out.println("Неверный введённый возраст");
+            System.out.println("Введён Неверный  возраст");
         }
     }
 }
