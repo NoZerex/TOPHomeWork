@@ -1,20 +1,20 @@
+import java.util.Scanner;
+
 public class FirstHomeWork {
     public static void main(String[] args) {
-        byte firstPrimitive = 123;
-        short secondPrimitive = 12345;
-        int thirdPrimitive = 1234567890;
-        long fourthPrimitive = 12345678900000L;
-        float fifthPrimitive = 123.45f;
-        double sixthPrimitive = 123456789.123456789;
-        char seventhPrimitive = 'a';
-        boolean eighthPrimitive = true;
-
-        int sum = 2 + 2;
-        int subtraction = 4 - 2;
-        int multiplications = 2 * 2;
-        int division = 4 / 2;
-        int dividingByTheRemainder = 20 % 10;
-        System.out.println(sum + " " + subtraction + " " + multiplications + " " + division + " " + dividingByTheRemainder);
+        System.out.print("Введите возраст: ");
+        Scanner sc = new Scanner(System.in);
+        int age = sc.nextInt();
+        if (age >= 2 && age <= 6) {
+            System.out.println("Вам нужно идти в детский сад");
+        } else if (age >= 7 && age <= 18) {
+            System.out.println("Вам нужно посещать в школу");
+        } else if (age > 18 && age < 24) {
+            System.out.println("Вам нужно учиться в университете");
+        } else if (age > 24) {
+            System.out.println("Вам пора идти на работу");
+        } else {
+            System.out.println("Неверный введённый возраст");
+        }
     }
-
 }
