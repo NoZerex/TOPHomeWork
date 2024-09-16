@@ -14,7 +14,7 @@ public class SecondHomeWork {
         double mariaSalarySalaryDifference = (newMariaSalary * 12) - (mariaSalary * 12);
         System.out.println("Диана теперь получает " + newDianaSalary + "рублей. Годовой доход вырос на " + dianaSalarySalaryDifference + "рублей»");
         System.out.println("Андрей теперь получает " + newAndreySalary + "рублей. Годовой доход вырос на " + andreySalarySalaryDifference + "рублей»");
-        System.out.println("Мария теперь получает " + mariaSalary + "рублей. Годовой доход вырос на " + mariaSalarySalaryDifference + "рублей»");
+        System.out.println("Мария теперь получает " + newMariaSalary + "рублей. Годовой доход вырос на " + mariaSalarySalaryDifference + "рублей»");
         System.out.println(newDianaSalary);
     }
 }
