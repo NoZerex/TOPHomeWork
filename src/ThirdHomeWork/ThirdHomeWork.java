@@ -8,6 +8,7 @@ public class ThirdHomeWork {
                 System.out.print(i * j);
             }
             System.out.println();
+
         }
     }
 }
