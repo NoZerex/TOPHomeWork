@@ -19,8 +19,8 @@ public class SecondHomeWork {
             sum += arr[i];
             min = Math.min(arr[i], min);
             max = Math.max(arr[i], max);
-
         }
+
         BigDecimal minValue = new BigDecimal(min);
         BigDecimal maxValue = new BigDecimal(max);
 
