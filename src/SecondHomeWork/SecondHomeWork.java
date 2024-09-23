@@ -10,13 +10,11 @@ public class SecondHomeWork {
         int randomNum = rand.nextInt(9) + 1;
 
         double[] arr = new double[randomNum];
-        double sum = 0;
         double min = Double.MAX_VALUE;
         double max = Double.MIN_VALUE;
 
         for (int i = 0; i < arr.length; i++) {
             arr[i] = rand.nextDouble(100);
-            sum += arr[i];
             min = Math.min(arr[i], min);
             max = Math.max(arr[i], max);
         }
