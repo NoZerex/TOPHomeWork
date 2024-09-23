@@ -8,7 +8,6 @@ public class SecondHomeWork {
     public static void main(String[] args) {
         Random rand = new Random();
         int randomNum = rand.nextInt(9) + 1;
-
         double[] arr = new double[randomNum];
         double min = Double.MAX_VALUE;
         double max = Double.MIN_VALUE;

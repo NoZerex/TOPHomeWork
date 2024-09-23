@@ -17,7 +17,6 @@ public class FisrtHomeWork {
         sum = sum / arr.length;
 
         System.out.print("Cреднее арифметическое чисел: " + sum);
-
     }
 }
 
