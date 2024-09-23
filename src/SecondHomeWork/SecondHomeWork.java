@@ -1,36 +1,33 @@
 package SecondHomeWork;
 
-import java.util.Scanner;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.Random;
 
 public class SecondHomeWork {
     public static void main(String[] args) {
-        String str = "I love Beer!!!";
+        Random rand = new Random();
+        int randomNum = rand.nextInt(9) + 1;
 
-        char lastChar = str.charAt(str.length() - 1);
-        System.out.println("Последний символ строки: " + lastChar);
+        double[] arr = new double[randomNum];
+        double sum = 0;
+        double min = Double.MAX_VALUE;
+        double max = Double.MIN_VALUE;
 
-        boolean endsWithExclamation = str.endsWith("!!!");
-        System.out.println("Заканчивается с '!!!': " + endsWithExclamation);
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = rand.nextDouble(100);
+            sum += arr[i];
+            min = Math.min(arr[i], min);
+            max = Math.max(arr[i], max);
 
-        boolean startsWithILike = str.startsWith("I love");
-        System.out.println("Начинается на 'I like': " + startsWithILike);
+        }
+        BigDecimal minValue = new BigDecimal(min);
+        BigDecimal maxValue = new BigDecimal(max);
 
-        boolean containsJava = str.contains("Beer");
-        System.out.println("Содержит 'Beer': " + containsJava);
+        minValue = minValue.setScale(2, RoundingMode.HALF_DOWN);
+        maxValue = maxValue.setScale(2, RoundingMode.HALF_DOWN);
 
-        int positionOfJava = str.indexOf("Beer");
-        System.out.println("Позиция подстроки 'Beer': " + positionOfJava);
-
-        String replacedString = str.replace("a", "o");
-        System.out.println("Заменить все символы “а” на “о”.: " + replacedString);
-
-        String upperCaseStr = str.toUpperCase();
-        System.out.println("Строка к верхнему регистру: " + upperCaseStr);
-
-        String lowerCaseStr = str.toLowerCase();
-        System.out.println("Строка к нижнему регистру: " + lowerCaseStr);
-
+        System.out.println("Наименьшее число: " + minValue);
+        System.out.println("Наибольшее число: " + maxValue);
     }
 }
-
-
