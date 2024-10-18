@@ -1,5 +1,6 @@
 package Methods;
 
+@SuppressWarnings("ALL")
 public class Methods {
     /**
      * Этот метод принимает одно целое число и возвращает его квадрат.
@@ -31,15 +32,16 @@ public class Methods {
      */
 
 
-    public static int[] cornerValuesArray(int... numbers) {
-        if (numbers.length == 0) {
-            return new int[]{0, 0};
+    public static Integer[] cornerValuesArray(Integer[] numbers) {
+        if (numbers == null || numbers.length == 0) {
+            return new Integer[]{null, null};
         }
-        int[] cornerValues = new int[]{numbers[0], numbers[0]};
-        for (int num : numbers) {
+        Integer[] cornerValues = new Integer[2];
+        cornerValues[0] = cornerValues[1] = numbers[0];
+        for (Integer num : numbers) {
             if (num < numbers[0]) {
                 cornerValues[0] = num;
-            } else if (num > cornerValues[1]) {
+            } else if (num > cornerValues[0]) {
                 cornerValues[1] = num;
             }
         }
@@ -53,13 +55,13 @@ public class Methods {
      * @return Массив, содержащий наименьшее и наибольшее символьные значения.
      */
 
-    public static char[] cornerValuesArray(char... characters) {
-        if (characters.length == 0) {
-            return new char[]{0, 0};
+    public static Character[] cornerValuesArray(Character[] characters) {
+        if (characters == null || characters.length == 0) {
+            return new Character[]{null, null};
         }
-        char[] cornerValues = new char[]{characters[0], characters[0]};
+        Character[] cornerValues = new Character[]{characters[0], characters[0]};
 
-        for (char ch : characters) {
+        for (Character ch : characters) {
             if (ch < characters[0]) {
                 cornerValues[0] = ch;
             } else if (ch > cornerValues[1]) {
@@ -79,8 +81,8 @@ public class Methods {
      */
 
 
-    public static String[] cornerValuesArray(String... strings) {
-        if (strings.length == 0) {
+    public static String[] cornerValuesArray(String[] strings) {
+        if (strings == null || strings.length == 0) {
             return new String[]{null, null};
         }
         String[] cornerValues = new String[]{strings[0], strings[0]};
@@ -97,5 +99,20 @@ public class Methods {
         }
     }
 
+    /**
+     * Этот метод находит факториал числа.
+     *
+     * @param number Число, факториал которого нужно найти.
+     * @return Факториал введённый числа.
+     */
 
+    public static int factorial(int number) {
+        if (number == 1) {
+            return 1;
+        }
+        return number * factorial(number - 1);
+    }
 }
+
+
+
