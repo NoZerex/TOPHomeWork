@@ -3,6 +3,17 @@ public class Book {
     private Author author;
     private Integer year;
 
+    public Book(Author author, String title, Integer year) {
+        this.author = author;
+        this.title = title;
+        this.year = year;
+    }
+
+    public Book(String title, String authorName, String authorSurname, Integer year) {
+        this.title = title;
+        this.author = new Author(authorName, authorSurname);
+        this.year = year;
+    }
 
     public Author getAuthor() {
         return author;
@@ -28,7 +39,12 @@ public class Book {
         this.title = title;
     }
 
-    public String getInfo() {
-        return "Title: " + title + "\nAuthor: " + author.getInfo() + "\nYear: " + year;
+    @Override
+    public String toString() {
+        return "Book{" +
+                "author=" + author +
+                ", title='" + title + '\'' +
+                ", year=" + year +
+                '}';
     }
 }

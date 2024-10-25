@@ -1,38 +1,23 @@
 public class Main {
     public static void main(String[] args) {
-        Author author1 = new Author();
-        author1.setName("Фёдор");
-        author1.setSurname("Достоевский");
+        Author author1 = new Author("Фёдор", "Достоевский");
+        Author author2 = new Author("Максим", "Горький");
+        Author author3 = new Author("Чак", "Паланик");
+        Book book1 = new Book(author1, "Преступление и наказание", 1866);
+        Book book2 = new Book(author2, "На дне", 1902);
 
-        Author author2 = new Author();
-        author2.setName("Максим");
-        author2.setSurname("Горький");
+        System.out.println(author1);
+        System.out.println(author2);
+        System.out.println(author3);
+        System.out.println(book1);
+        System.out.println(book2);
 
-        Author author3 = new Author();
-        author3.setName("Чак");
-        author3.setSurname("Паланик");
+        book1.setTitle("Мёртвые ду́ши");
+        book1.setYear(1835);
+        book1.setAuthor(new Author("Николай", "Гоголь"));
+        System.out.println(book1);
 
-        Book book1 = new Book();
-        book1.setTitle("Преступление и наказание");
-        book1.setAuthor(author1);
-        book1.setYear(1866);
-
-        Book book2 = new Book();
-        book2.setAuthor(author2);
-        book2.setTitle("На дне");
-        book2.setYear(1902);
-
-        Book book3 = new Book();
-        book3.setAuthor(author3);
-        book3.setTitle("Бойцовский клуб");
-        book3.setYear(1996);
-
-        System.out.println(author1.getInfo());
-        System.out.println(author2.getInfo());
-        System.out.println(author3.getInfo());
-
-        System.out.println(book1.getInfo());
-        System.out.println(book2.getInfo());
-        System.out.println(book3.getInfo());
+        Book book4 = new Book("Бойцовский клуб", "Чак", "Паланик", 1996);
+        System.out.println(book4);
     }
 }
