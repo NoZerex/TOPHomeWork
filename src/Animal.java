@@ -1,13 +1,13 @@
-public abstract class Animal {
+public class Animal {
     private String name;
 
     public Animal(String name) {
         this.name = name;
     }
 
-     abstract void makeSound();
-      abstract void move();
-
+    void makeSound(){
+        System.out.println("MakeSound");
+    }
 
     public String getName() {
         return name;

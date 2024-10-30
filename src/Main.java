@@ -1,23 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-        Animal bird = new Bird("Яго", true);
-        Animal dog = new Dog("Шарик");
-        Animal cat = new Cat("Матроскин");
+        Animal animal1 = new Bird("Яго",true);
+        Animal animal2 = new Dog("Шарик");
+        Animal animal3 = new Cat("Матроскин");
 
-        Animal[] animals = {bird, dog, cat};
+        Animal[] animals = {animal1, animal2,animal3};
 
         for (Animal animal : animals) {
             System.out.print(animal.getName() + ": ");
             animal.makeSound();
-            if (animal instanceof Dog) {
-                System.out.print(" ");
-                ((Dog) animal).play();
-            } else if (animal instanceof Cat) {
-                System.out.print(" ");
-                ((Cat) animal).play();
-            }
-            System.out.println();
         }
-
     }
 }

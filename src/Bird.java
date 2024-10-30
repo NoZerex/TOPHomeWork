@@ -6,15 +6,6 @@ public class Bird extends Animal {
         this.canFly = canFly;
     }
 
-    @Override
-    void move() {
-        if (canFly) {
-            System.out.println("Птица летает");
-        } else {
-            System.out.println("Птица ходит");
-        }
-
-    }
 
     @Override
     void makeSound() {
