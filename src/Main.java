@@ -9,6 +9,7 @@ public class Main {
         for (Animal animal : animals) {
             System.out.print(animal.getName() + ": ");
             animal.makeSound();
+
         }
     }
 }
