@@ -1,50 +1,29 @@
-public class Book {
-    private String title;
-    private Author author;
-    private Integer year;
+class Book {
+    private final int id;
+    private final String title;
+    private final String author;
+    private final boolean isAvailable;
 
-    public Book(Author author, String title, Integer year) {
+    public Book(int id, String title, String author, boolean isAvailable) {
+        this.id = id;
+        this.title = title;
         this.author = author;
-        this.title = title;
-        this.year = year;
+        this.isAvailable = isAvailable;
     }
 
-    public Book(String title, String authorName, String authorSurname, Integer year) {
-        this.title = title;
-        this.author = new Author(authorName, authorSurname);
-        this.year = year;
-    }
-
-    public Author getAuthor() {
-        return author;
-    }
-
-    public Integer getYear(Integer year) {
-        return year;
+    public int getId() {
+        return id;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setAuthor(Author author) {
-        this.author = author;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setYear(Integer year) {
-        this.year = year;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    @Override
-    public String toString() {
-        return "Book{" +
-                "author=" + author +
-                ", title='" + title + '\'' +
-                ", year=" + year +
-                '}';
+    public boolean getIsAvailable() {
+        return isAvailable;
     }
 }
